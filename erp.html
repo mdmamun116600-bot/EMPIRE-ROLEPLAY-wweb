@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags for Google Ranking -->
+    <title>Empire Roleplay | Official open.mp & SA-MP Server [PC/Mobile]</title>
+    <meta name="description" content="Empire Roleplay - বাংলাদেশের অন্যতম শীর্ষস্থানীয় GTA San Andreas Multiplayer (open.mp) সার্ভার। পিসি এবং অ্যান্ড্রয়েড মোবাইলে খেলুন সেরা রোলপ্লে অভিজ্ঞতা নিয়ে।">
+    <meta name="keywords" content="Empire Roleplay, Empire RP, SA-MP Bangladesh, open.mp Bangladesh, GTA SA Mobile RP, Bangladesh GTA RP Server">
+    <meta name="author" content="Empire Roleplay">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for Discord / Facebook Link Preview -->
+    <meta property="og:title" content="Empire Roleplay - GTA SA-MP [PC/Mobile]">
+    <meta property="og:description" content="Join the most active roleplay server in Bangladesh. Direct connect IP: 151.243.226.35:7777">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Tiro+Bangla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #c084fc;
+            --primary-glow: rgba(192, 132, 252, 0.4);
+            --bg-dark: #08090d;
+            --card-bg: rgba(16, 18, 27, 0.85);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --discord: #5865F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Rajdhani', 'Tiro Bangla', sans-serif;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 15%, rgba(168, 85, 247, 0.12), transparent 55%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+
+        /* Real Server Logo Display */
+        .server-logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.6));
+            animation: pulseLogo 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseLogo {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
+            }
+            100% {
+                transform: scale(1.03);
+                filter: drop-shadow(0 0 30px rgba(192, 132, 252, 0.8));
+            }
+        }
+
+        .badge {
+            background: rgba(192, 132, 252, 0.12);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            text-shadow: 0 0 25px var(--primary-glow);
+        }
+
+        h1 span {
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-discord {
+            background: var(--discord);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(88, 101, 242, 0.4);
+        }
+
+        .btn-discord:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(88, 101, 242, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        /* IP / Server Info Box */
+        .ip-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 550px;
+            width: 100%;
+        }
+
+        .ip-text {
+            text-align: left;
+        }
+
+        .ip-text small {
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #22c55e;
+        }
+
+        .ip-text p {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .card i {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        /* Toast Alert */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #10b981;
+            color: #000;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        #toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 30px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .ip-card { flex-direction: column; text-align: center; }
+            .ip-text { text-align: center; }
+            .ip-text small { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Server Logo -->
+            <img src="logo.png" alt="Empire Roleplay Official Logo" class="server-logo">
+            
+            <span class="badge">SA-MP & open.mp Roleplay</span>
+            <h1>EMPIRE <span>ROLEPLAY</span></h1>
+            <p class="subtitle">
+                বাংলাদেশের শীর্ষস্থানীয় GTA San Andreas Multiplayer সার্ভার। পিসি এবং অ্যান্ড্রয়েড মোবাইল দুই প্ল্যাটফর্ম থেকেই আমাদের সাথে যুক্ত হয়ে বাস্তবসম্মত রোলপ্লের অভিজ্ঞতা নিন।
+            </p>
+
+            <div class="btn-group">
+                <a href="https://discord.gg/6J8SbDQbb4" target="_blank" class="btn btn-discord">
+                    <i class="fa-brands fa-discord"></i> জয়েন ডিসকর্ড
+                </a>
+                <a href="#connect" class="btn btn-outline">
+                    <i class="fa-solid fa-gamepad"></i> সার্ভার কানেক্ট
+                </a>
+            </div>
+
+            <!-- Server IP Copy Box -->
+            <div class="ip-card" id="connect">
+                <div class="ip-text">
+                    <small><span class="status-dot"></span> Server Online • 7777</small>
+                    <p id="serverIP">151.243.226.35:7777</p>
+                </div>
+                <button class="copy-btn" onclick="copyIP()">
+                    <i class="fa-regular fa-copy"></i> কপি আইপি
+                </button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>পিসি ও মোবাইল সাপোর্ট</h3>
+                    <p>যেকোনো সাধারণ অ্যান্ড্রয়েড ফোন অথবা কম্পিউটার থেকে খুব সহজেই ল্যাগ ছাড়া আমাদের সার্ভারে প্লে করতে পারবেন।</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-building-shield"></i>
+                    <h3>কাস্টম সিস্টেম ও স্ক্রিপ্ট</h3>
+                    <p>আধুনিক ইকোনমি, পুলিশ, রিয়েল এস্টেট, কাস্টম ফ্র্যাকশন এবং বাস্তবসম্মত জব সিস্টেমের সমন্বয়ে তৈরি এক অনন্য গেমপ্লে।</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>সক্রিয় কমিউনিটি</h3>
+                    <p>নিয়মিত টুর্নামেন্ট, ইভেন্ট এবং ২৪/৭ সাপোর্ট টিম। যেকোনো সমস্যায় সাহায্য পেতে আমাদের ডিসকর্ড উন্মুক্ত।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Empire Roleplay. All Rights Reserved. Hosted with open.mp.</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast">আইপি কপি করা হয়েছে! গেম লঞ্চারে পেস্ট করুন।</div>
+
+    <script>
+        function copyIP() {
+            const ipText = document.getElementById("serverIP").innerText;
+            navigator.clipboard.writeText(ipText).then(() => {
+                const toast = document.getElementById("toast");
+                toast.classList.add("show");
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 2500);
+            }).catch(err => {
+                console.error("কপি করতে সমস্যা হয়েছে: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
